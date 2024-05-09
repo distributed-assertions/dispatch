@@ -89,7 +89,7 @@ export class FileBacked {
 }
 
 export const config        = new FileBacked("config.json", {
-    "my-gateway": "http://dweb.link",
+    "my-gateway": "http://w3s.link",
     "my-web3.storage-api-token": "**insert your token here**",
 });
 export const keyStore      = new FileBacked("keystore.json");

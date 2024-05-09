@@ -180,7 +180,7 @@ let processProduction = async (obj: {}, result: {}) => {
     //    productionOutput["mode"] = mode
     //}
     // make it more general --> getting doesn't restrict mode values, it just outputs what exists?
-    if (mode["/"]) { // ipldLink which should refer to a "tool" format object cid
+    if (mode && mode["/"]) { // ipldLink which should refer to a "tool" format object cid
         let toolCid = production["mode"]["/"]
         productionOutput["mode"] = toolCid
         let tool = await ipfsGetObj(toolCid)    // should check format "tool"

@@ -16,11 +16,11 @@
   "dependencies": {
     "@ipld/dag-cbor": "^9.0.0",
     "@ipld/dag-json": "^10.0.1",
+    "@web3-storage/w3up-client": "^13.0.1",
     "commander": "^10.0.0",
     "multiformats": "^11.0.2",
     "node-fetch": "^3.3.1",
     "pkg": "^5.5.2",
-    "web3.storage": "^4.5.4",
     "wget-improved": "^3.3.0"
   },
   "bin": {

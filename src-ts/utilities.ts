@@ -223,13 +223,13 @@ export async function ensureFullDAG(cid: string) {
         console.log(`DEBUG: ensureFullDAG(${ cid }):`);
         console.log("DEBUG:   ipfs dag export failed");
         console.log(`DEBUG:   ${ err }`);
-        const gateway = config.read("my-gateway");
+        const gateway = await config.read("my-gateway");
         if (!gateway) {
             console.error("ERROR: unknown gateway (while trying to retrieve data");
             console.error(`Consider running ${ process.argv0 } set-gateway`);
             throw new Error("unknown gateway");
         }
-        const url = `${ gateway }/api/v0/dag/export?arg=${ cid }`;
+        const url = `${ gateway }/ipfs/${ cid }?format=car`;
         console.log(`DEBUG: ensureFullDAG(${ cid }):`);
         console.log(`DEBUG:   url = ${ url }`);
         const response = await fetch(url);
